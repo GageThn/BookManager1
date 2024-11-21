@@ -1,7 +1,8 @@
 @model BookModel
 
 @{
-    ViewData["Title"] = "Delete Book";
+    string title = ViewBag.Action;
+    ViewData["Title"] = title;
 }
 
 <h2>Confirm Deletion</h2>
