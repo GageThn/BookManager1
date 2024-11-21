@@ -9,37 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookManagerFinal
 build_property.RootNamespace = BookManagerFinal
-build_property.ProjectDir = /Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/
+build_property.ProjectDir = C:\Users\cbair\Source\Repos\BookManager1\BookManagerFinal\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal
+build_property.MSBuildProjectDirectory = C:\Users\cbair\Source\Repos\BookManager1\BookManagerFinal
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/Home/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EZWxldGUuY3NodG1s
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/Home/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/Home/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FZGl0LmNzaHRtbA==
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/Home/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/Home/Summary.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdW1tYXJ5LmNzaHRtbA==
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/Home/Summary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdW1tYXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/gagethorn/Projects/BookManagerFinal/BookManagerFinal/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-6zzd8znpay
+[C:/Users/cbair/Source/Repos/BookManager1/BookManagerFinal/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-71xw8f131z
