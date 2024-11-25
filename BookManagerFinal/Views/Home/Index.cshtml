@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Books>
+@{
     ViewData["Title"] = "Home Page";
 }
 <style>
@@ -11,31 +12,41 @@
         padding: 10px;
     }
 </style>
-<table align="center">
+<table class="table table-bordered table-striped">
     <thead>
         <tr colspan="5">
             <!--LABEL THESE-->
-            <th>Id</th>
             <th>Book</th>
             <th>Rating</th>
-            <th>Summary</th>
+            <th>Reading Status</th>
             <th>Edit/Delete</th>
         </tr>
     </thead>
-    <tr>
-        <td>1</td>
-        <td>Spiderman</td>
-        <td>10/10</td>
-        <td>
-            <a class="nav-link" asp-controller="Home" asp-action="Summary">Summary</a>
-        </td>
-        <td>
-            <a class="nav-link" asp-controller="Home" asp-action="Edit">Edit</a>
-        </td>
-        <td>
-            <a class="nav-link" asp-controller="Home" asp-action="Delete">Delete</a>
-        </td>
-    </tr>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Name</td>
+                <td>@book.Rating</td>
+                <td>@book.Status</td>
 
+                <td>
+                    <a asp-controller="Home" asp-action="Summary"
+                     asp-route-id="@book.BookId"
+                     asp-route-slug="@book.Slug">Summary</a>
+                </td
+                <td>
+                    <a asp-controller="Home" asp-action="Edit"
+                     asp-route-id="@book.BookId"
+                     asp-route-slug="@book.Slug">>Edit</a>
+                 </td>
+                 <td>
+                     <a asp-controller="Home" asp-action="Delete"
+                      asp-route-id="@book.BookId"
+                      asp-route-slug="@book.Slug">>Delete</a>
+                 </td>
+            </tr>
 
+        }
+    </tbody>
 </table>
