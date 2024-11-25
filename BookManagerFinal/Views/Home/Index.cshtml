@@ -1,4 +1,4 @@
-﻿@model List<Books>
+﻿@model List<BookModel>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -38,7 +38,7 @@
                 <td>
                     <a asp-controller="Home" asp-action="Edit"
                      asp-route-id="@book.BookId"
-                     asp-route-slug="@book.Slug">>Edit</a>
+                     asp-route-slug="@book.Slug">Edit</a>
                  </td>
                  <td>
                      <a asp-controller="Home" asp-action="Delete"
