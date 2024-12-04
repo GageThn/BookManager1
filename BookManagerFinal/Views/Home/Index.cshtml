@@ -6,6 +6,7 @@
     td{
         text-align: right;
         padding: 10px;
+        color: white;
     }
     th {
         text-align: right;
@@ -14,7 +15,9 @@
 
 </style>
 
-<table class="table table-bordered table-striped text-light m-3">
+
+
+<table class="table table-bordered table-striped text-white m-3">
     <thead>
         <tr colspan="5">
             <!--LABEL THESE-->
@@ -24,6 +27,7 @@
             <th>Summary</th>
             <th>Edit</th>
             <th>Delete</th>
+            <th>Add</th>
         </tr>
     </thead>
     <tbody>
@@ -50,6 +54,11 @@
                       asp-route-id="@book.BookId"
                       asp-route-slug="@book.Slug">Delete</a>
                  </td>
+                <td>
+                    <a asp-controller="Home" asp-action="Add"
+                       asp-route-id="@book.BookId"
+                       asp-route-slug="@book.Slug">Add</a>
+                </td>
             </tr>
 
         }
