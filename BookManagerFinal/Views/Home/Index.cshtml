@@ -1,4 +1,4 @@
-﻿@model List<BookModel>
+@model List<BookModel>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -12,6 +12,7 @@
         padding: 10px;
     }
 </style>
+
 <table class="table table-bordered table-striped">
     <thead>
         <tr colspan="5">
@@ -19,6 +20,7 @@
             <th>Book</th>
             <th>Rating</th>
             <th>Reading Status</th>
+            <th>Summary</th>
             <th>Edit/Delete</th>
         </tr>
     </thead>
@@ -29,6 +31,7 @@
                 <td>@book.Name</td>
                 <td>@book.Rating</td>
                 <td>@book.Status</td>
+                
 
                 <td>
                     <a asp-controller="Home" asp-action="Summary"
@@ -50,3 +53,4 @@
         }
     </tbody>
 </table>
+
