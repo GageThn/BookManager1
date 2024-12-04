@@ -1,7 +1,9 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BookManagerFinal.Models;
 using static System.Reflection.Metadata.BlobBuilder;
+using System.Net;
+using Microsoft.EntityFrameworkCore;
 namespace BookManagerFinal.Controllers;
 
 public class HomeController : Controller
@@ -16,10 +18,16 @@ public class HomeController : Controller
         return View(books);
     }
 
-    public IActionResult Summary()
+    public IActionResult Summary(int id)
     {
-        var books = context.Books.OrderBy(m => m.Name).ToList();
-        return View(books);
+        var book = context.Books.FirstOrDefault(b => b.BookId == id);
+
+        if (book == null)
+        {
+            return NotFound();
+        }
+
+        return View(book);
     }
 
     public IActionResult Edit()
@@ -28,6 +36,12 @@ public class HomeController : Controller
     }
     public IActionResult Delete()
     {
+
+        
+
+
+
+
         return View();
     }
 }
