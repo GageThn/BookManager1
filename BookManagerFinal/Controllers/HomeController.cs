@@ -30,19 +30,38 @@ public class HomeController : Controller
         return View(book);
     }
 
-    public IActionResult Edit()
+    public IActionResult Edit(int id)
     {
-        return View();
+        var book = context.Books.FirstOrDefault(b => b.BookId == id);
+
+        if (book == null)
+        {
+            return NotFound();
+        }
+
+        return View(book);
     }
-    public IActionResult Delete()
+    public IActionResult Add(int id)
     {
+        var book = context.Books.FirstOrDefault(b => b.BookId == id);
 
-        
+        if (book == null)
+        {
+            return NotFound();
+        }
 
+        return View(book);
+    }
+    public IActionResult Delete(int id)
+    {
+        var book = context.Books.FirstOrDefault(b => b.BookId == id);
 
+        if (book == null)
+        {
+            return NotFound();
+        }
 
-
-        return View();
+        return View(book);
     }
 }
 
