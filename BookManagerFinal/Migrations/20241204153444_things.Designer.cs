@@ -3,6 +3,7 @@ using BookManagerFinal.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookManagerFinal.Migrations
 {
     [DbContext(typeof(BookContext))]
-    partial class BookContextModelSnapshot : ModelSnapshot
+    [Migration("20241204153444_things")]
+    partial class things
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,10 +42,10 @@ namespace BookManagerFinal.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("ReadingStatus")
                         .IsRequired()
-                        .HasMaxLength(999)
-                        .HasColumnType("nvarchar(999)");
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
 
                     b.Property<string>("Summary")
                         .IsRequired()
@@ -58,11 +60,11 @@ namespace BookManagerFinal.Migrations
                         new
                         {
                             BookId = 1,
-                            Genre = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles",
+                            Genre = "young adult",
                             Name = "Song of Achilles",
                             Rating = 5,
-                            Status = "read",
-                            Summary = "young adult"
+                            ReadingStatus = "read",
+                            Summary = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles"
                         },
                         new
                         {
@@ -70,7 +72,7 @@ namespace BookManagerFinal.Migrations
                             Genre = "fantasy",
                             Name = "Harry Potter and the Prisoner of Azkaban",
                             Rating = 5,
-                            Status = "read",
+                            ReadingStatus = "read",
                             Summary = "Harry Potter enters his third year at HOgwarts only to be greeted by a tense atmosphere caused by a prisson at Azkaban escaping. Harry along with his friends learn of a connection between the prisoner and his parents. Learning of his innocence Harry travels back in time to set things right."
                         },
                         new
@@ -79,7 +81,7 @@ namespace BookManagerFinal.Migrations
                             Genre = "young adult",
                             Name = "I'll Give You the Sun",
                             Rating = 4,
-                            Status = "will read",
+                            ReadingStatus = "will read",
                             Summary = "A brother and sister, who once were inseparable but have driven each other away. As the twins get older, and figure out what kind of people they want to be, they start to see each other and their parents not just as extensions of themselves, but as individuals."
                         });
                 });

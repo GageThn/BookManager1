@@ -3,6 +3,7 @@ using BookManagerFinal.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookManagerFinal.Migrations
 {
     [DbContext(typeof(BookContext))]
-    partial class BookContextModelSnapshot : ModelSnapshot
+    [Migration("20241204150338_12042024pt2")]
+    partial class _12042024pt2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,13 +44,12 @@ namespace BookManagerFinal.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasMaxLength(999)
-                        .HasColumnType("nvarchar(999)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Summary")
                         .IsRequired()
-                        .HasMaxLength(999)
-                        .HasColumnType("nvarchar(999)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BookId");
 
@@ -58,11 +59,11 @@ namespace BookManagerFinal.Migrations
                         new
                         {
                             BookId = 1,
-                            Genre = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles",
+                            Genre = "young adult",
                             Name = "Song of Achilles",
                             Rating = 5,
                             Status = "read",
-                            Summary = "young adult"
+                            Summary = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles"
                         },
                         new
                         {

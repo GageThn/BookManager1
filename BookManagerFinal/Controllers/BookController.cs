@@ -5,10 +5,12 @@ namespace BookManagerFinal.Controllers
 {
 	public class BookController : Controller
 	{
-		public BookController()
-		{
 
-		}
+        public IActionResult Add()
+        {
+            ViewBag.Action = "Add";
+            return View("Edit", new BookModel());
+        }
         public IActionResult Index(int id, int rating)
         {
             ViewBag.id = id;
@@ -22,6 +24,7 @@ namespace BookManagerFinal.Controllers
         }
         public IActionResult Delete()
         {
+            ViewBag.Action = "Delete";
             return View();
         }
         public IActionResult Summary()
