@@ -50,7 +50,7 @@ public class HomeController : Controller
             return NotFound();
         }
 
-        return View(book);
+        return View("Add", book);
     }
     public IActionResult Delete(int id)
     {
