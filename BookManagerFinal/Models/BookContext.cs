@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Threading;
 
 namespace BookManagerFinal.Models
 {
@@ -19,8 +20,8 @@ namespace BookManagerFinal.Models
                 {
                     BookId = 1,
                     Name = "Song of Achilles",
-                    Description = "young adult",
-                    Genre = "young adult",
+                    Summary = "young adult",
+                    Genre = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles",
                     Status = "read",
                     Rating = 5
                 },
@@ -28,7 +29,7 @@ namespace BookManagerFinal.Models
                 {
                     BookId = 2,
                     Name = "Harry Potter and the Prisoner of Azkaban",
-                    Description = "fantasy",
+                    Summary = "Harry Potter enters his third year at HOgwarts only to be greeted by a tense atmosphere caused by a prisson at Azkaban escaping. Harry along with his friends learn of a connection between the prisoner and his parents. Learning of his innocence Harry travels back in time to set things right.",
                     Genre = "fantasy",
                     Status = "read",
                     Rating = 5
@@ -37,7 +38,7 @@ namespace BookManagerFinal.Models
                 {
                     BookId = 3,
                     Name = "I'll Give You the Sun",
-                    Description = "young adult",
+                    Summary = "A brother and sister, who once were inseparable but have driven each other away. As the twins get older, and figure out what kind of people they want to be, they start to see each other and their parents not just as extensions of themselves, but as individuals.",
                     Genre = "young adult",
                     Status = "will read",
                     Rating = 4
