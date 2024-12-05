@@ -15,7 +15,7 @@ namespace BookManagerFinal.Migrations
                     BookId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Summary = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Genre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<int>(type: "int", nullable: false)
@@ -27,17 +27,17 @@ namespace BookManagerFinal.Migrations
 
             migrationBuilder.InsertData(
                 table: "Books",
-                columns: new[] { "BookId", "Description", "Genre", "Name", "Rating", "Status" },
+                columns: new[] { "BookId", "Summary", "Genre", "Name", "Rating", "Status" },
                 values: new object[] { 1, "young adult", "young adult", "Song of Achilles", 5, "read" });
 
             migrationBuilder.InsertData(
                 table: "Books",
-                columns: new[] { "BookId", "Description", "Genre", "Name", "Rating", "Status" },
+                columns: new[] { "BookId", "Summary", "Genre", "Name", "Rating", "Status" },
                 values: new object[] { 2, "fantasy", "fantasy", "Harry Potter and the Prisoner of Azkaban", 5, "read" });
 
             migrationBuilder.InsertData(
                 table: "Books",
-                columns: new[] { "BookId", "Description", "Genre", "Name", "Rating", "Status" },
+                columns: new[] { "BookId", "Summary", "Genre", "Name", "Rating", "Status" },
                 values: new object[] { 3, "young adult", "young adult", "I'll Give You the Sun", 4, "will read" });
         }
 

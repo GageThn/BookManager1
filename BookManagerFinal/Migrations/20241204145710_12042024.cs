@@ -9,7 +9,7 @@ namespace BookManagerFinal.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Description",
+                name: "Summary",
                 table: "Books");
 
             migrationBuilder.AlterColumn<string>(
@@ -67,7 +67,7 @@ namespace BookManagerFinal.Migrations
                 oldMaxLength: 3);
 
             migrationBuilder.AddColumn<string>(
-                name: "Description",
+                name: "Summary",
                 table: "Books",
                 type: "nvarchar(max)",
                 nullable: false,
@@ -77,21 +77,21 @@ namespace BookManagerFinal.Migrations
                 table: "Books",
                 keyColumn: "BookId",
                 keyValue: 1,
-                columns: new[] { "Description", "Genre" },
+                columns: new[] { "Summary", "Genre" },
                 values: new object[] { "young adult", "young adult" });
 
             migrationBuilder.UpdateData(
                 table: "Books",
                 keyColumn: "BookId",
                 keyValue: 2,
-                column: "Description",
+                column: "Summary",
                 value: "fantasy");
 
             migrationBuilder.UpdateData(
                 table: "Books",
                 keyColumn: "BookId",
                 keyValue: 3,
-                column: "Description",
+                column: "Summary",
                 value: "young adult");
         }
     }

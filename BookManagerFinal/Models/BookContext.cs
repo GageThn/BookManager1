@@ -29,7 +29,7 @@ namespace BookManagerFinal.Models
                 {
                     BookId = 2,
                     Name = "Harry Potter and the Prisoner of Azkaban",
-                    Summary = "Harry Potter enters his third year at HOgwarts only to be greeted by a tense atmosphere caused by a prisson at Azkaban escaping. Harry along with his friends learn of a connection between the prisoner and his parents. Learning of his innocence Harry travels back in time to set things right.",
+                    Summary = "Harry Potter enters his third year at Hogwarts only to be greeted by a tense atmosphere caused by a prisson at Azkaban escaping. Harry along with his friends learn of a connection between the prisoner and his parents. Learning of his innocence Harry travels back in time to set things right.",
                     Genre = "fantasy",
                     Status = "read",
                     Rating = 5

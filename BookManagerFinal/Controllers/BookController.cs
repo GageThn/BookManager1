@@ -23,25 +23,53 @@ namespace BookManagerFinal.Controllers
             ViewBag.rating = rating;
             return View("Index");
         }
-        public IActionResult Edit()
+        [HttpGet]
+        public IActionResult Edit(int id)
         {
+            ViewBag.Action = "Edit";
+            var book = context.Books.Find(id);
             return View();
         }
+        [HttpPost]
+        public IActionResult Edit(BookModel book)
+        {
+            if (ModelState.IsValid)
+            {
+                if (book.BookId == 0)
+                {
+                    context.Books.Add(book);
+                }
+                else
+                {
+                    context.Books.Update(book);
+                }
+                context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ViewBag.Action = (book.BookId == 0) ? "Add" : "Edit";
+
+                return View(book);
+            }
+
+        }
         //Delete()
-	[HttpGet]
-	public IActionResult Delete(int id)
-	{
+        [HttpGet]
+	    public IActionResult Delete(int id)
+	    {
     	   var book = context.Books.Find(id);
            return View(book);
-	}
+	    }
 
-	[HttpPost]
-	public IActionResult Delete(BookModel book)
-	{
- 	   context.Books.Remove(book);
-  	   context.SaveChanges();
+	    [HttpPost]
+	    public IActionResult Delete(BookModel book)
+	    {
+ 	        context.Books.Remove(book);
+  	        context.SaveChanges();
     	   return RedirectToAction("Index", "Home");
-	}
+	    }
+
         public IActionResult Summary()
         {
             return View();

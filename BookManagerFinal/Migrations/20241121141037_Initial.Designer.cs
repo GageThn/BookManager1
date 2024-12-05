@@ -31,7 +31,7 @@ namespace BookManagerFinal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookId"), 1L, 1);
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Summary")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -58,7 +58,7 @@ namespace BookManagerFinal.Migrations
                         new
                         {
                             BookId = 1,
-                            Description = "young adult",
+                            Summary = "young adult",
                             Genre = "young adult",
                             Name = "Song of Achilles",
                             Rating = 5,
@@ -67,7 +67,7 @@ namespace BookManagerFinal.Migrations
                         new
                         {
                             BookId = 2,
-                            Description = "fantasy",
+                            Summary = "fantasy",
                             Genre = "fantasy",
                             Name = "Harry Potter and the Prisoner of Azkaban",
                             Rating = 5,
@@ -76,7 +76,7 @@ namespace BookManagerFinal.Migrations
                         new
                         {
                             BookId = 3,
-                            Description = "young adult",
+                            Summary = "young adult",
                             Genre = "young adult",
                             Name = "I'll Give You the Sun",
                             Rating = 4,
