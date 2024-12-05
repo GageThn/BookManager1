@@ -20,8 +20,8 @@ namespace BookManagerFinal.Models
                 {
                     BookId = 1,
                     Name = "Song of Achilles",
-                    Summary = "young adult",
-                    Genre = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles",
+                    Summary = "The Song of Achilles by Madeline Miller retells the Trojan War through the eyes of Patroclus focusing on his deep, passionate love for the legendary Greek warrior Achilles",
+                    Genre = "young adult",
                     Status = "read",
                     Rating = 5
                 },
