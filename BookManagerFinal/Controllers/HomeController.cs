@@ -41,16 +41,12 @@ public class HomeController : Controller
 
         return View(book);
     }
-    public IActionResult Add(int id)
+    [HttpGet]
+    public IActionResult Add()
     {
-        var book = context.Books.FirstOrDefault(b => b.BookId == id);
 
-        if (book == null)
-        {
-            return NotFound();
-        }
-
-        return View("Add", book);
+        ViewBag.Action = "Add";
+        return View("Add", new BookModel());
     }
     public IActionResult Delete(int id)
     {
