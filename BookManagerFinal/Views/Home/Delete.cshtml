@@ -21,7 +21,7 @@
 <h2>Confirm Deletion</h2>
 <h2>@Model.Name</h2>
 
-<form asp-action="Delete" method="post">
+<form asp-action="Delete" asp-controller="Book" method="post">
     <input type="hidden" asp-for="BookId" />
 
     <button type="submit" class="btn btn-primary">Delete</button>
