@@ -30,17 +30,39 @@ public class HomeController : Controller
         return View(book);
     }
 
+    [HttpGet]
     public IActionResult Edit(int id)
     {
-        var book = context.Books.FirstOrDefault(b => b.BookId == id);
-
-        if (book == null)
-        {
-            return NotFound();
-        }
-
+        ViewBag.Action = "Edit";
+        var book = context.Books.Find(id);
         return View(book);
     }
+
+    [HttpPost]
+    public IActionResult Edit(BookModel book)
+    {
+        if (ModelState.IsValid)
+        {
+            if (book.BookId == 0)
+            {
+                context.Books.Add(book);
+            }
+            else
+            {
+                context.Books.Update(book);
+            }
+            context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+        else
+        {
+            ViewBag.Action = (book.BookId == 0) ? "Add" : "Edit";
+
+            return View(book);
+        }
+
+    }
+
     [HttpGet]
     public IActionResult Add()
     {
@@ -48,16 +70,21 @@ public class HomeController : Controller
         ViewBag.Action = "Add";
         return View("Add", new BookModel());
     }
+
+    [HttpGet]
     public IActionResult Delete(int id)
     {
-        var book = context.Books.FirstOrDefault(b => b.BookId == id);
 
-        if (book == null)
-        {
-            return NotFound();
-        }
-
+        var book = context.Books.Find(id);
         return View(book);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(BookModel book)
+    {
+        context.Books.Remove(book);
+        context.SaveChanges();
+        return RedirectToAction("Index", "Home");
     }
 }
 
