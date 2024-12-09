@@ -30,6 +30,8 @@ public class HomeController : Controller
         return View(book);
     }
 
+
+//edit method 
     [HttpGet]
     public IActionResult Edit(int id)
     {
@@ -63,14 +65,37 @@ public class HomeController : Controller
 
     }
 
-    [HttpGet]
-    public IActionResult Add()
+    // [HttpGet]
+//  public IActionResult Add()
+// {
+
+//      ViewBag.Action = "Add";
+//      return View("Add", new BookModel());
+// }
+//Add method 
+[HttpGet]
+public IActionResult Add()
+{
+    ViewBag.Action = "Add";
+    return View(new BookModel());
+}
+[HttpPost]
+public IActionResult Add(BookModel book)
+{
+    if (ModelState.IsValid)
     {
-
-        ViewBag.Action = "Add";
-        return View("Add", new BookModel());
+        context.Books.Add(book);
+        context.SaveChanges();
+        return RedirectToAction("Index", "Home");
     }
+    else
+    {
+        ViewBag.Action = "Add";
+        return View(book);
+    }
+}
 
+    //delete method 
     [HttpGet]
     public IActionResult Delete(int id)
     {
