@@ -7,7 +7,11 @@
 <h2>Add Page </h2>
 <h2>@Model.Name</h2>
 </div>
+<style>
+    label{color:white;
+   }
 
+</style>
 <form asp-action="Add" method="post">
 
     <div asp-validation-summary="All" class="text-danger"></div>
@@ -41,6 +45,6 @@
     <input type="hidden" asp-for="BookId" />
 
     <button type="submit" class="btn btn-primary">Add New Book</button>
-    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Cancel</a>
 
 </form>
